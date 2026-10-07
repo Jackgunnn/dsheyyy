@@ -1,10 +1,15 @@
 def two_sum(arr, target):
-    for num in arr:
-        diff = target - num
-        if diff in arr and diff != num:
-            return num, diff
+    seen = {}
+    for i in range(len(arr)):
+        diff = target - arr[i]
+       
+        if diff in seen:
+            return [seen[diff], i]
+        else:
+            seen[arr[i]] = i
+                
 
-arr = [3,2,4]
-target = 6
+arr = [2,5,7,9]
+target = 9
 t = two_sum(arr, target)
 print(t)
