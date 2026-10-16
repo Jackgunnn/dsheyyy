@@ -1,15 +1,15 @@
 def max_profit(prices):
 
-    maxi = 0
+    lowest = prices[0]
+    maxxx = 0
+
     for i in range(len(prices)):
-        for j in range(i+1, len(prices)):
-            diff = prices[j] - prices[i]
-            # print(i, diff)
-            if diff > maxi:
-                maxi = diff
+        if lowest > prices[i]:
+            lowest = prices[i]
+        else:
+            maxxx = max(maxxx, prices[i] - lowest)
 
-    return maxi
-
+    return maxxx 
 
 prices = [[7,1,5,3,6,4],
           [7, 6, 4, 3, 1],
