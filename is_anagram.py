@@ -1,3 +1,5 @@
+#sorting method
+
 def is_anagram(s, t):
 
     if len(s) != len(t):
