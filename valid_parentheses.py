@@ -1,8 +1,5 @@
 def valid_parentheses(s): #stack problem
 
-    if s == "": #if Empty String -> True
-        return True
-
     hashMap = {
         '[' : ']',
         '{' : '}',
