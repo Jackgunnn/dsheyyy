@@ -1,3 +1,4 @@
+#TWO POINTERS
 def is_palindrome(s):
     left = 0
     right = len(s) - 1

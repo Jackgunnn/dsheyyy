@@ -1,3 +1,4 @@
+#TRACKING MAX VALUE USING A VARIABLE, here the var is "maxxx"
 def find_max(nums):
     if len(nums) == 0:
         print("Empty Array!")

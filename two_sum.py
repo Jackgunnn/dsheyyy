@@ -1,3 +1,4 @@
+#HASHMAP
 def two_sum(arr, target):
     seen = {}
     for i in range(len(arr)):

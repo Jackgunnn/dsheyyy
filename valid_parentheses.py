@@ -1,4 +1,5 @@
-def valid_parentheses(s): #stack problem
+#STACK
+def valid_parentheses(s):
 
     hashMap = {
         '[' : ']',
