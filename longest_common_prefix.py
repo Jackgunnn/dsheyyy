@@ -1,21 +1,38 @@
-def longest_common_prefix(s):
-    prefix = ""
-    char = s[0][0]
+#CONCEPT: Vertical Scanning
+#USECASE: Useful when comparing multiple strings, filenames, identifiers, or common prefixes in data
 
-    for i in range(len(min(s, key=len))): #(0,4) 0 1 2 3
+def longest_common_prefix(s):
+    if not s:
+        return ""
+    
+    prefix = ""
+    shortest_word = min(s, key=len)
+
+    for i in range(len(shortest_word)): #(0,4) 0 1 2 3
+        char = shortest_word[i]
         for j in range(len(s)):           #(0,3) 0 1 2
             if char != s[j][i]: 
-                break
+                return prefix
 
+        prefix+=char
             
-            prefix+=char
-            char = s[i][i+1]
 
     return prefix
 
 
 
 
-s = ["flower", "flow", "flight"]
-    #s[0][0] , s[1][0]   s[2][0]  s[j][i]
-print(longest_common_prefix(s))
+print(longest_common_prefix(["flower", "flow", "flight"]))
+# "fl"
+
+print(longest_common_prefix(["dog", "racecar", "car"]))
+# ""
+
+print(longest_common_prefix(["interview", "internet", "internal"]))
+# "inter"
+
+print(longest_common_prefix(["alone"]))
+# "alone"
+
+print(longest_common_prefix([]))
+# ""
